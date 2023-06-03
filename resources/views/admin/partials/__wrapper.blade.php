@@ -1,12 +1,10 @@
 <!-- Begin page -->
 <div id="layout-wrapper">
-    @include('admin.partials.__page-topbar')
+@include('admin.partials.__page-topbar')
 
-    <!-- ========== Left Sidebar Start ========== -->
-    @include('admin.partials.__vertical-menu')
-    <!-- Left Sidebar End -->
-
-
+<!-- ========== Left Sidebar Start ========== -->
+@include('admin.partials.__vertical-menu')
+<!-- Left Sidebar End -->
 
 
     <!-- ============================================================== -->
@@ -140,20 +138,26 @@
                                 <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
                                     <h6 class="card-title mb-0">درآمد</h6>
                                     <div class="dropdown">
-                                        <a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye"
-                                                                                                                      class="icon-sm me-2"></i> <span class="">مشاهده</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2"
-                                                                                                                      class="icon-sm me-2"></i> <span class="">ویرایش</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash"
-                                                                                                                      class="icon-sm me-2"></i> <span class="">حذف</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer"
-                                                                                                                      class="icon-sm me-2"></i> <span class="">چاپ</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download"
-                                                                                                                      class="icon-sm me-2"></i> <span class="">دانلود</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                                    data-feather="eye"
+                                                    class="icon-sm me-2"></i> <span class="">مشاهده</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                                    data-feather="edit-2"
+                                                    class="icon-sm me-2"></i> <span class="">ویرایش</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                                    data-feather="trash"
+                                                    class="icon-sm me-2"></i> <span class="">حذف</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                                    data-feather="printer"
+                                                    class="icon-sm me-2"></i> <span class="">چاپ</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                                    data-feather="download"
+                                                    class="icon-sm me-2"></i> <span class="">دانلود</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +168,9 @@
                                     <div class="col-md-5 d-flex justify-content-md-end">
                                         <div class="btn-group mb-3 mb-md-0" role="group" aria-label="Basic example">
                                             <button type="button" class="btn btn-outline-primary">امروز</button>
-                                            <button type="button" class="btn btn-outline-primary d-none d-md-block">هفته</button>
+                                            <button type="button" class="btn btn-outline-primary d-none d-md-block">
+                                                هفته
+                                            </button>
                                             <button type="button" class="btn btn-primary">ماه</button>
                                             <button type="button" class="btn btn-outline-primary">سال</button>
                                         </div>
@@ -188,7 +194,8 @@
                                             <a class="nav-link active" data-bs-toggle="tab" href="#buy-tab" role="tab">خرید</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#sell-tab" role="tab">فروش</a>
+                                            <a class="nav-link" data-bs-toggle="tab" href="#sell-tab"
+                                               role="tab">فروش</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -198,7 +205,10 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="buy-tab" role="tabpanel">
                                         <div class="float-end ms-2">
-                                            <h5 class="font-size-14"><i class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i> <a href="#!" class="text-reset text-decoration-underline">۲۳,۷۵۴.۲۵</a></h5>
+                                            <h5 class="font-size-14"><i
+                                                    class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i>
+                                                <a href="#!" class="text-reset text-decoration-underline">۲۳,۷۵۴.۲۵</a>
+                                            </h5>
                                         </div>
                                         <h5 class="font-size-14 mb-4">خرید ارز</h5>
                                         <div>
@@ -245,7 +255,10 @@
                                     <!-- end tab pane -->
                                     <div class="tab-pane" id="sell-tab" role="tabpanel">
                                         <div class="float-end ms-2">
-                                            <h5 class="font-size-14"><i class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i> <a href="#!" class="text-reset text-decoration-underline">۲,۷۵.۲۵</a></h5>
+                                            <h5 class="font-size-14"><i
+                                                    class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i>
+                                                <a href="#!" class="text-reset text-decoration-underline">۲,۷۵.۲۵</a>
+                                            </h5>
                                         </div>
                                         <h5 class="font-size-14 mb-4">فروش ارز</h5>
 
@@ -253,7 +266,8 @@
 
                                             <div class="form-group mb-3">
                                                 <label>ایدی کیف:</label>
-                                                <input type="email" class="form-control" placeholder="1cvb254ugxvfcd280ki">
+                                                <input type="email" class="form-control"
+                                                       placeholder="1cvb254ugxvfcd280ki">
                                             </div>
 
                                             <div>
@@ -304,19 +318,23 @@
                             <div class="card-header align-items-center d-flex">
                                 <h4 class="card-title mb-0 flex-grow-1">تراکنش ها</h4>
                                 <div class="flex-shrink-0">
-                                    <ul class="nav justify-content-end nav-tabs-custom rounded card-header-tabs" role="tablist">
+                                    <ul class="nav justify-content-end nav-tabs-custom rounded card-header-tabs"
+                                        role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-bs-toggle="tab" href="#transactions-all-tab" role="tab">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#transactions-all-tab"
+                                               role="tab">
                                                 کل
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#transactions-buy-tab" role="tab">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#transactions-buy-tab"
+                                               role="tab">
                                                 خرید
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#transactions-sell-tab" role="tab">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#transactions-sell-tab"
+                                               role="tab">
                                                 فروش
                                             </a>
                                         </li>
@@ -930,7 +948,6 @@
                                                 </tr>
 
 
-
                                                 <tr>
                                                     <td style="width: 50px;">
                                                         <div class="font-size-22 text-danger">
@@ -993,7 +1010,8 @@
 
                                         <li class="activity-list activity-border">
                                             <div class="activity-icon avatar-md">
-                                                        <span class="avatar-title bg-soft-warning text-warning rounded-circle">
+                                                        <span
+                                                            class="avatar-title bg-soft-warning text-warning rounded-circle">
                                                         <i class="bx bx-bitcoin font-size-24"></i>
                                                         </span>
                                             </div>
@@ -1001,7 +1019,8 @@
                                                 <div class="d-flex">
                                                     <div class="flex-grow-1 overflow-hidden me-4">
                                                         <h5 class="font-size-14 mb-1">۱۴۰۱/۰۴/۱۰</h5>
-                                                        <p class="text-truncate text-muted font-size-13">0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
+                                                        <p class="text-truncate text-muted font-size-13">
+                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
                                                     </div>
                                                     <div class="flex-shrink-0 text-end me-3">
                                                         <h6 class="mb-1">BTC+۰.۵</h6>
@@ -1010,7 +1029,9 @@
 
                                                     <div class="flex-shrink-0 text-end">
                                                         <div class="dropdown">
-                                                            <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <a class="text-muted dropdown-toggle font-size-24"
+                                                               role="button" data-bs-toggle="dropdown"
+                                                               aria-haspopup="true">
                                                                 <i class="mdi mdi-dots-vertical"></i>
                                                             </a>
 
@@ -1029,7 +1050,8 @@
 
                                         <li class="activity-list activity-border">
                                             <div class="activity-icon avatar-md">
-                                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                        <span
+                                                            class="avatar-title bg-soft-primary text-primary rounded-circle">
                                                         <i class="mdi mdi-ethereum font-size-24"></i>
                                                         </span>
                                             </div>
@@ -1037,7 +1059,8 @@
                                                 <div class="d-flex">
                                                     <div class="flex-grow-1 overflow-hidden me-4">
                                                         <h5 class="font-size-14 mb-1">۱۴۰۱/۰۴/۰۹</h5>
-                                                        <p class="text-truncate text-muted font-size-13">0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
+                                                        <p class="text-truncate text-muted font-size-13">
+                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
                                                     </div>
                                                     <div class="flex-shrink-0 text-end me-3">
                                                         <h6 class="mb-1">ETH-۲۰.۵</h6>
@@ -1046,7 +1069,9 @@
 
                                                     <div class="flex-shrink-0 text-end">
                                                         <div class="dropdown">
-                                                            <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <a class="text-muted dropdown-toggle font-size-24"
+                                                               role="button" data-bs-toggle="dropdown"
+                                                               aria-haspopup="true">
                                                                 <i class="mdi mdi-dots-vertical"></i>
                                                             </a>
 
@@ -1065,7 +1090,8 @@
 
                                         <li class="activity-list activity-border">
                                             <div class="activity-icon avatar-md">
-                                                        <span class="avatar-title bg-soft-warning text-warning rounded-circle">
+                                                        <span
+                                                            class="avatar-title bg-soft-warning text-warning rounded-circle">
                                                         <i class="bx bx-bitcoin font-size-24"></i>
                                                         </span>
                                             </div>
@@ -1073,7 +1099,8 @@
                                                 <div class="d-flex">
                                                     <div class="flex-grow-1 overflow-hidden me-4">
                                                         <h5 class="font-size-14 mb-1">۱۴۰۱/۰۴/۰۹</h5>
-                                                        <p class="text-truncate text-muted font-size-13">0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
+                                                        <p class="text-truncate text-muted font-size-13">
+                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
                                                     </div>
                                                     <div class="flex-shrink-0 text-end me-3">
                                                         <h6 class="mb-1">BTC+۰.۵ </h6>
@@ -1082,7 +1109,9 @@
 
                                                     <div class="flex-shrink-0 text-end">
                                                         <div class="dropdown">
-                                                            <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <a class="text-muted dropdown-toggle font-size-24"
+                                                               role="button" data-bs-toggle="dropdown"
+                                                               aria-haspopup="true">
                                                                 <i class="mdi mdi-dots-vertical"></i>
                                                             </a>
 
@@ -1101,7 +1130,8 @@
 
                                         <li class="activity-list activity-border">
                                             <div class="activity-icon avatar-md">
-                                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                        <span
+                                                            class="avatar-title bg-soft-primary text-primary rounded-circle">
                                                         <i class="mdi mdi-litecoin font-size-24"></i>
                                                         </span>
                                             </div>
@@ -1109,7 +1139,8 @@
                                                 <div class="d-flex">
                                                     <div class="flex-grow-1 overflow-hidden me-4">
                                                         <h5 class="font-size-14 mb-1">۱۴۰۱/۰۴/۰۷</h5>
-                                                        <p class="text-truncate text-muted font-size-13">0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
+                                                        <p class="text-truncate text-muted font-size-13">
+                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
                                                     </div>
                                                     <div class="flex-shrink-0 text-end me-3">
                                                         <h6 class="mb-1">LTC-۱.۵ </h6>
@@ -1118,7 +1149,9 @@
 
                                                     <div class="flex-shrink-0 text-end">
                                                         <div class="dropdown">
-                                                            <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <a class="text-muted dropdown-toggle font-size-24"
+                                                               role="button" data-bs-toggle="dropdown"
+                                                               aria-haspopup="true">
                                                                 <i class="mdi mdi-dots-vertical"></i>
                                                             </a>
 
@@ -1138,7 +1171,8 @@
 
                                         <li class="activity-list activity-border">
                                             <div class="activity-icon avatar-md">
-                                                        <span class="avatar-title bg-soft-warning text-warning rounded-circle">
+                                                        <span
+                                                            class="avatar-title bg-soft-warning text-warning rounded-circle">
                                                         <i class="bx bx-bitcoin font-size-24"></i>
                                                         </span>
                                             </div>
@@ -1146,7 +1180,8 @@
                                                 <div class="d-flex">
                                                     <div class="flex-grow-1 overflow-hidden me-4">
                                                         <h5 class="font-size-14 mb-1">۱۴۰۱/۰۴/۰۶</h5>
-                                                        <p class="text-truncate text-muted font-size-13">0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
+                                                        <p class="text-truncate text-muted font-size-13">
+                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
                                                     </div>
                                                     <div class="flex-shrink-0 text-end me-3">
                                                         <h6 class="mb-1">BTC+۰.۵ </h6>
@@ -1155,7 +1190,9 @@
 
                                                     <div class="flex-shrink-0 text-end">
                                                         <div class="dropdown">
-                                                            <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <a class="text-muted dropdown-toggle font-size-24"
+                                                               role="button" data-bs-toggle="dropdown"
+                                                               aria-haspopup="true">
                                                                 <i class="mdi mdi-dots-vertical"></i>
                                                             </a>
 
@@ -1174,7 +1211,8 @@
 
                                         <li class="activity-list">
                                             <div class="activity-icon avatar-md">
-                                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                                        <span
+                                                            class="avatar-title bg-soft-primary text-primary rounded-circle">
                                                         <i class="mdi mdi-litecoin font-size-24"></i>
                                                         </span>
                                             </div>
@@ -1182,7 +1220,8 @@
                                                 <div class="d-flex">
                                                     <div class="flex-grow-1 overflow-hidden me-4">
                                                         <h5 class="font-size-14 mb-1">۱۴۰۱/۰۴/۰۶</h5>
-                                                        <p class="text-truncate text-muted font-size-13">0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
+                                                        <p class="text-truncate text-muted font-size-13">
+                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431</p>
                                                     </div>
                                                     <div class="flex-shrink-0 text-end me-3">
                                                         <h6 class="mb-1">LTC+.۵۵ </h6>
@@ -1191,7 +1230,9 @@
 
                                                     <div class="flex-shrink-0 text-end">
                                                         <div class="dropdown">
-                                                            <a class="text-muted dropdown-toggle font-size-24" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <a class="text-muted dropdown-toggle font-size-24"
+                                                               role="button" data-bs-toggle="dropdown"
+                                                               aria-haspopup="true">
                                                                 <i class="mdi mdi-dots-vertical"></i>
                                                             </a>
 
@@ -1222,6 +1263,7 @@
         </div>
 
 
+        @include('admin.partials.__footer')
     </div>
     <!-- end main content-->
 
