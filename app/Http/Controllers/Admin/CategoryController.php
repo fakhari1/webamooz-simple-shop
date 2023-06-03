@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\CategoryRequest;
+use App\Models\Admin\Category;
+use Illuminate\Http\Request;
+
+class CategoryController extends Controller
+{
+
+
+    public function index()
+    {
+        $categories = Category::all();
+
+        return view('admin.category.index', compact('categories'));
+    }
+
+
+    public function store(CategoryRequest $request)
+    {
+        $data = [
+            'title_fa' => $request->title_fa,
+            'title_en' => $request->title_en,
+            'parent_id' => $request->parent_id ?? null
+        ];
+
+        Category::create($data);
+
+        return redirect()->back()->with(['success_msg' => 'رکورد با موفقیت ایجاد شد']);
+    }
+
+
+    public function edit(Category $category)
+    {
+        $categories = Category::all();
+        return view('admin.category.edit', ['editCategory' => $category, 'categories' => $categories]);
+    }
+
+    public function update(Category $category, CategoryRequest $request)
+    {
+        $data = [
+            'title_fa' => $request->title_fa,
+            'title_en' => $request->title_en,
+            'parent_id' => $request->parent_id ?? null
+        ];
+
+        $category->update($data);
+
+        return redirect()->route('admin.categories.index')->with(['success_msg' => 'رکورد مورد نظر بروزرسانی شد']);
+    }
+
+    public function destroy(Category $category)
+    {
+        $category->delete();
+
+        return redirect()->back()->with(['success_msg' => 'رکورد مورد نظر با موفقیت حذف شد']);
+    }
+}
