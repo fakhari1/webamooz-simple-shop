@@ -24088,7 +24088,7 @@ div.tox .tox-dialog__body {
 
 
 
-table tr td{
+table tr td, table th{
     text-align: center !important;
 }
 

@@ -1,9 +1,10 @@
 @php $dash .= '-- '; @endphp
 
-
-@foreach($categories as $category)
-    <option value="{{$category->id}}">{{$dash . $category->title_fa}}</option>
-    @if(count($category->children))
-        @include('admin.category.__children',['categories' => $category->children])
+@foreach($children as $child)
+    <option value="{{$child->id}}"
+            @if(!empty($editCategory) && $editCategory->parent_id == $child->id) selected @endif
+    >{{$dash . $child->title_fa}}</option>
+    @if(count($child->children))
+        @include('admin.category.__children',['children' => $child->children, 'editCategory' => $editCategory])
     @endif
 @endforeach

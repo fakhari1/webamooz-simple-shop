@@ -34,7 +34,7 @@
                                                                                for="checkAll"></label>
                                                                     </div>
                                                                 </th>
-                                                                <th style="width: 120px;">شناسه</th>
+                                                                <th>شناسه</th>
                                                                 <th>نام دسته بندی</th>
                                                                 <th>نام انگلیسی دسته بندی</th>
                                                                 <th class="text-center">دسته پدر</th>
@@ -54,17 +54,18 @@
                                                                         </div>
                                                                     </td>
 
-                                                                    <td><a href="javascript: void(0);"
-                                                                           class="text-dark fw-medium">
+                                                                    <td style="text-align: center !important; max-width: 30px !important;"><a
+                                                                            href="javascript: void(0);"
+                                                                            class="text-dark fw-medium">
                                                                             {{ $category->id }}
                                                                         </a></td>
                                                                     <td>
                                                                         {{ $category->title_fa }}
                                                                     </td>
-                                                                    <td>{{ $category->title_en }}</td>
+                                                                    <td style="text-align: left !important;">{{ $category->title_en }}</td>
 
                                                                     <td class="text-center">
-                                                                        {{ $category->parent->title_fa ?? '-' }}
+                                                                        {{ $category->parent->title_fa ?? 'والد' }}
                                                                     </td>
                                                                     <td>
                                                                         <div class="dropdown">
@@ -84,11 +85,17 @@
                                                                                     </a></li>
                                                                                 <li>
                                                                                     <a class="dropdown-item d-flex justify-content-between w-75 mx-auto"
-                                                                                       href="{{ route('admin.categories.delete', $category->id) }}">
+                                                                                       href="#" onclick="event.preventDefault(); document.querySelector('#form_{{ $category->id }}').submit()">
                                                                                         <i class="fas fa-trash text-danger ms-1"></i>
                                                                                         <span
                                                                                             class="text-center">حذف</span>
                                                                                     </a></li>
+                                                                                <form
+                                                                                    action="{{ route('admin.categories.delete', $category->id) }}"
+                                                                                    method="post" id="form_{{ $category->id }}">
+                                                                                    @csrf
+                                                                                    @method('delete')
+                                                                                </form>
                                                                             </ul>
                                                                         </div>
                                                                     </td>
@@ -144,6 +151,7 @@
                                             <select name="parent_id" id="parent_id" class="form-select">
                                                 <option disabled selected>انتخاب کنید</option>
 
+                                                <option>دسته والد</option>
                                                 @foreach($categories as $key => $category)
                                                     @php $dash=''; @endphp
 
@@ -154,7 +162,7 @@
                                                     @endif
 
                                                     @if(count($category->children))
-                                                        @include('admin.category.__children',['categories' => $category->children])
+                                                        @include('admin.category.__children',['children' => $category->children])
                                                     @endif
                                                 @endforeach
                                             </select>
