@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,17 @@ Route::get('/', function () {
     return view('client.index');
 });
 
+Route::prefix('admin')->group(function () {
 
-Route::get('/admin', function () {
-    return view('admin.index');
+    Route::get('/', [DashboardController::class, 'index'])->name('admin.index');
+
+    Route::prefix('categories')->group(function () {
+
+        Route::get('/', [CategoryController::class, 'index'])->name('admin.categories.index');
+        Route::get('create', [CategoryController::class, 'create'])->name('admin.categories.create');
+        Route::post('store', [CategoryController::class, 'store'])->name('admin.categories.store');
+        Route::get('{category}/edit', [CategoryController::class, 'edit'])->name('admin.categories.edit');
+        Route::patch('{category}/update', [CategoryController::class, 'update'])->name('admin.categories.update');
+        Route::delete('{category}/delete', [CategoryController::class, 'delete'])->name('admin.categories.delete');
+    });
 });

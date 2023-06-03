@@ -9,9 +9,16 @@
                 <li class="menu-title" data-key="t-menu">منو</li>
 
                 <li>
-                    <a href="index-3.html">
+                    <a href="{{ route('admin.index') }}">
                         <i data-feather="home"></i>
                         <span data-key="t-dashboard">داشبورد</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('admin.categories.index') }}">
+                        <i class="fas fa-list"></i>
+                        <span>دسته بندی ها</span>
                     </a>
                 </li>
 

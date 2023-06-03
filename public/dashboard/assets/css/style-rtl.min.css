@@ -24085,3 +24085,10 @@ div.tox .tox-dialog__body {
 .wizard.vertical>.actions>ul>li {
     margin: 0 .7em 0 0
 }
+
+
+
+table tr td{
+    text-align: center !important;
+}
+
