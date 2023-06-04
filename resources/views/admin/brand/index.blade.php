@@ -6,7 +6,6 @@
     <div class="main-content">
         <div class="page-content">
             <div class="container-fluid">
-                @include('admin.partials.__request-errors')
 
                 <div class="row">
                     <div class="col-md-12 grid-margin stretch-card">
