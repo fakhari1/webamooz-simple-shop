@@ -24,8 +24,14 @@ class CategoryController extends Controller
         $data = [
             'title_fa' => $request->title_fa,
             'title_en' => $request->title_en,
-            'parent_id' => $request->parent_id ?? null
         ];
+
+
+        $data['parent_id'] = null;
+
+        if (is_numeric($request->parent_id) && $request->parent_id > 0) {
+            $data['parent_id'] = $request->parent_id;
+        }
 
         Category::create($data);
 

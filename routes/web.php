@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Client\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,7 @@ use App\Http\Controllers\Admin\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('client.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->group(function () {
 
