@@ -1,4 +1,4 @@
-@php $dash .= '-- '; @endphp
+@php $dash .= '--->  '; @endphp
 
 @foreach($children as $firstChild)
 
