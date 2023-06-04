@@ -153,18 +153,17 @@
                                         <div class="col-sm-9">
                                             <select name="parent_id" id="parent_id" class="form-select">
                                                 <option selected>دسته والد</option>
-                                                @foreach($categories as $key => $category)
+                                                @foreach($categories->where('parent_id', null) as $key => $category)
                                                     @php $dash=''; @endphp
 
-                                                    @if($category->parent == null)
-                                                        <option value="{{ $category->id }}">
-                                                            {{ $category->title_fa }}
-                                                        </option>
-                                                    @endif
+                                                    <option value="{{ $category->id }}">
+                                                        {{ $category->title_fa }}
+                                                    </option>
 
                                                     @if(count($category->children))
                                                         @include('admin.category.__children',['children' => $category->children])
                                                     @endif
+
                                                 @endforeach
                                             </select>
                                         </div>

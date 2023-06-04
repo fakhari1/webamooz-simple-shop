@@ -13,6 +13,7 @@ class CategoryController extends Controller
 
     public function index()
     {
+//        $parentCategories = Category::where('parent_id', null)->get();
         $categories = Category::all();
 
         return view('admin.category.index', compact('categories'));
