@@ -54,7 +54,8 @@
                                                                         </div>
                                                                     </td>
 
-                                                                    <td style="text-align: center !important; max-width: 30px !important;"><a
+                                                                    <td style="text-align: center !important; max-width: 30px !important;">
+                                                                        <a
                                                                             href="javascript: void(0);"
                                                                             class="text-dark fw-medium">
                                                                             {{ $category->id }}
@@ -85,14 +86,16 @@
                                                                                     </a></li>
                                                                                 <li>
                                                                                     <a class="dropdown-item d-flex justify-content-between w-75 mx-auto"
-                                                                                       href="#" onclick="event.preventDefault(); document.querySelector('#form_{{ $category->id }}').submit()">
+                                                                                       href="#"
+                                                                                       onclick="event.preventDefault(); document.querySelector('#form_{{ $category->id }}').submit()">
                                                                                         <i class="fas fa-trash text-danger ms-1"></i>
                                                                                         <span
                                                                                             class="text-center">حذف</span>
                                                                                     </a></li>
                                                                                 <form
                                                                                     action="{{ route('admin.categories.delete', $category->id) }}"
-                                                                                    method="post" id="form_{{ $category->id }}">
+                                                                                    method="post"
+                                                                                    id="form_{{ $category->id }}">
                                                                                     @csrf
                                                                                     @method('delete')
                                                                                 </form>
@@ -149,9 +152,7 @@
                                                class="col-sm-3 col-form-label">دسته پدر</label>
                                         <div class="col-sm-9">
                                             <select name="parent_id" id="parent_id" class="form-select">
-                                                <option disabled selected>انتخاب کنید</option>
-
-                                                <option>دسته والد</option>
+                                                <option selected>دسته والد</option>
                                                 @foreach($categories as $key => $category)
                                                     @php $dash=''; @endphp
 
