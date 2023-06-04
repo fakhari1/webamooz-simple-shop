@@ -28,13 +28,15 @@
 
     <link rel="stylesheet" href="{{ asset('dashboard/assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <!-- endinject -->
-    <link rel="stylesheet" href="{{ asset('dashboard/style/css/style-rtl.min.css') }}">
-    <!-- Layout styles -->
 
     <link rel="stylesheet" href="{{ asset('fonts/fa5/all.min.css') }}">
     <!-- End layout styles -->
 
     <link rel="stylesheet" href="{{ asset('dashboard/assets/css/sweetalert2.css') }}">
+
+
+    <link rel="stylesheet" href="{{ asset('dashboard/style/css/style-rtl.min.css') }}">
+    <!-- Layout styles -->
 
     {{--    <link rel="shortcut icon" href="style/images/favicon.png" />--}}
 

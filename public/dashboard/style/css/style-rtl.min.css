@@ -82,7 +82,7 @@
     box-sizing: border-box
 }
 
-@media (prefers-reduced-motion:no-preference) {
+@media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth
     }
@@ -101,3 +101,6 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
+table th, table td {
+    text-align: center !important;
+}

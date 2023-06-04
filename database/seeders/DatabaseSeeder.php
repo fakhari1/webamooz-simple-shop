@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Admin\Brand;
 use App\Models\Admin\Category;
 use Illuminate\Database\Seeder;
 
@@ -98,5 +99,28 @@ class DatabaseSeeder extends Seeder
             'title_en' => 'female',
             'parent_id' => $modeAndWearing->id
         ]);
+
+
+        Brand::create([
+            'name' => 'سامسونگ',
+            'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1200px-Samsung_Logo.svg.png?20221128191222',
+        ]);
+
+        Brand::create([
+            'name' => 'ال جی',
+            'image_url' => 'https://static.vecteezy.com/system/resources/previews/019/017/463/original/lg-transparent-logo-free-png.png',
+        ]);
+
+        Brand::create([
+            'name' => 'اپل',
+            'image_url' => 'https://w7.pngwing.com/pngs/566/77/png-transparent-apple-logo-apple-watch-logo-apple-logo-heart-logo-computer-wallpaper.png',
+        ]);
+
+        Brand::create([
+            'name' => 'لنُوو',
+            'image_url' => 'https://w7.pngwing.com/pngs/650/1002/png-transparent-dell-laptop-lenovo-logo-lg-electronics-text-trademark.png'
+        ]);
+
+
     }
 }

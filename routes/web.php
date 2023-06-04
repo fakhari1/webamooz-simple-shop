@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Admin\BrandController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +32,16 @@ Route::prefix('admin')->group(function () {
         Route::patch('{category}/update', [CategoryController::class, 'update'])->name('admin.categories.update');
         Route::delete('{category}/delete', [CategoryController::class, 'destroy'])->name('admin.categories.delete');
     });
+
+    Route::prefix('brands')->group(function () {
+
+        Route::get('/', [BrandController::class, 'index'])->name('admin.brands.index');
+        Route::get('create', [BrandController::class, 'create'])->name('admin.brands.create');
+        Route::post('store', [BrandController::class, 'store'])->name('admin.brands.store');
+        Route::get('{brand}/edit', [BrandController::class, 'edit'])->name('admin.brands.edit');
+        Route::patch('{brand}/update', [BrandController::class, 'update'])->name('admin.brands.update');
+        Route::delete('{brand}/delete', [BrandController::class, 'destroy'])->name('admin.brands.delete');
+
+    });
 });
+
