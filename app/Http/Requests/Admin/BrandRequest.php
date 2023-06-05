@@ -25,17 +25,17 @@ class BrandRequest extends FormRequest
 
         if ($this->method() == "POST") {
             return [
-                'title_fa' => ['required', 'string'],
-                'title_en' => ['nullable', 'string'],
-                'file' => ['required', 'mimetypes:image/jpeg,image/png']
+                'title_fa' => ['required', 'string', 'unique:brands,title_fa'],
+                'title_en' => ['nullable', 'string', 'unique:brands,title_en'],
+                'file' => ['required', 'mimetypes:image/jpeg,image/png', 'max:250']
             ];
         }
 
         if ($this->method() == 'PATCH' or $this->method() == 'PUT') {
             return [
-                'title_fa' => ['required', 'string'],
-                'title_en' => ['required', 'string'],
-                'file' => ['required', 'mimetypes:image/jpeg,image/png']
+                'title_fa' => ['required', 'string', 'unique:brands,title_fa'],
+                'title_en' => ['required', 'string', 'unique:brands,title_en'],
+                'file' => ['required', 'mimetypes:image/jpeg,image/png', 'max:250']
             ];
         }
     }
