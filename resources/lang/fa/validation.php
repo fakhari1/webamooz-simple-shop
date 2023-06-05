@@ -56,8 +56,8 @@ return [
         'string'  => ':attribute نباید بیشتر از :max کاراکتر باشد.',
         'array'   => ':attribute نباید بیشتر از :max آیتم باشد.',
     ],
-    'mimes'                => ':attribute باید یکی از فرمت های :values باشد.',
-    'mimetypes'            => ':attribute باید یکی از فرمت های :values باشد.',
+    'mimes'                => ':attribute باید یکی از پسوند های :values باشد.',
+    'mimetypes'            => ':attribute باید یکی از پسوند های :values باشد.',
     'min'                  => [
         'numeric' => ':attribute نباید کوچکتر از :min باشد.',
         'file'    => ':attribute نباید کوچکتر از :min کیلوبایت باشد.',
@@ -154,12 +154,21 @@ return [
         'display_name'          => 'نام نمایشی',
         'resource'              => 'نام ریسورس',
         'old_password'          => 'رمز عبور فعلی',
-        'new_password'           => 'رمز عبور جدید',
+        'new_password'          => 'رمز عبور جدید',
         'new_password_confirmation' => 'تکرار رمز عبور جدید',
         'longitude'             => 'طول جغرافیایی',
         'latitude'              => 'عرض جغرافیایی',
         'parent_id'             => 'والد',
-        'parent'                 => 'والد'
+        'parent'                => 'والد',
+        'file'                  => 'فایل',
     ],
+
+
+    'values' => [
+        'image/jpeg' => 'JPEG',
+        'image/jpg' => 'JPG',
+        'image/png' => 'PNG',
+    ],
+
 
 ];

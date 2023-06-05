@@ -39,8 +39,8 @@
                         </select>
                     </div>
                 </div>
-                <div class="row mb-3 align-items-end">
-                    <button type="submit" class="btn btn-success">ایجاد</button>
+                <div class="row mb-3 justify-content-end">
+                    <button type="submit" class="btn btn-success" style="max-width: 100px !important; margin-left: 10px;">ایجاد</button>
                 </div>
             </form>
 

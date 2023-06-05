@@ -35,12 +35,10 @@
                             </a>
                         </li>
                         <li>
-
                             <a href="{{ route('admin.brands.create') }}">
                                 <i class="fas fa-image"></i>
                                 <span>ایجاد برند</span>
                             </a>
-
                         </li>
 
                     </ul>

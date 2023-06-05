@@ -36,6 +36,7 @@
                                                                 </th>
                                                                 <th>#</th>
                                                                 <th>نام برند</th>
+                                                                <th>نام انگلیسی برند</th>
                                                                 <th>تصویر</th>
                                                                 <th style="width: 90px;">عملیات</th>
                                                             </tr>
@@ -60,7 +61,10 @@
                                                                             {{ $brand->id }}
                                                                         </a></td>
                                                                     <td>
-                                                                        {{ $brand->name }}
+                                                                        {{ $brand->title_fa }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ $brand->title_en }}
                                                                     </td>
                                                                     <td>
                                                                         <img src="{{ $brand->image_url }}" alt="" style="max-width: 100px !important;">

@@ -26,14 +26,22 @@ class BrandController extends Controller
 
     public function store(BrandRequest $request)
     {
+        $directory = 'images' . DIRECTORY_SEPARATOR . 'brands';
+        $file_name = $request->name . '.' . $request->title_en ?? $request->file('file')->getClientOriginalName();
+
+        $path = $path = $request
+            ->file('file')
+            ->storeAs($directory, $file_name);
+
         $data = [
-            'name' => $request->name,
-            'image_url' => $request->file->getClientOriginalName()
+            'title_fa' => $request->title_fa,
+            'title_en' => $request->title_en ?? null,
+            'image_url' => $path,
         ];
 
         Brand::create($data);
 
-        return view('admin.brands.index')->with(['success_msg' => 'رکورد مورد نظر با موفقیت ایجاد شد.']);
+        return redirect()->route('admin.brands.index')->with(['success_msg' => 'رکورد مورد نظر با موفقیت ایجاد شد.']);
     }
 
     public function edit(Brand $brand)

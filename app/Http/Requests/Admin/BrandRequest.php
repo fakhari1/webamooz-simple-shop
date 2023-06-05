@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\File;
 
 class BrandRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class BrandRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,12 +25,18 @@ class BrandRequest extends FormRequest
 
         if ($this->method() == "POST") {
             return [
-                'name' => ['required', 'string'],
-                'file' => ['required', 'file']
+                'title_fa' => ['required', 'string'],
+                'title_en' => ['nullable', 'string'],
+                'file' => ['required', 'mimetypes:image/jpeg,image/png']
             ];
-        } else {
+        }
 
-            return [];
+        if ($this->method() == 'PATCH' or $this->method() == 'PUT') {
+            return [
+                'title_fa' => ['required', 'string'],
+                'title_en' => ['required', 'string'],
+                'file' => ['required', 'mimetypes:image/jpeg,image/png']
+            ];
         }
     }
 }

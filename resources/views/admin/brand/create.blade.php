@@ -16,12 +16,19 @@
 
                                 <h6 class="card-title mb-3">ایجاد برند</h6>
 
-                                <form class="forms-sample" method="post" action="{{ route('admin.brands.store') }}">
+                                <form class="forms-sample" method="post" action="{{ route('admin.brands.store') }}"
+                                      enctype="multipart/form-data">
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-12">
-                                            <input type="text" class="form-control" name="name"
+                                            <input type="text" class="form-control" name="title_fa"
                                                    placeholder="نام برند">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <input type="text" name="title_en" id="" class="form-control"
+                                                   placeholder="نام انگلیسی برند">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -31,8 +38,10 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3 align-items-end">
-                                        <button type="submit" class="btn btn-success">ایجاد</button>
+                                    <div class="row mb-3 justify-content-end">
+                                        <button type="submit" class="btn btn-success"
+                                                style="max-width: 100px !important; margin-left: 10px;">ایجاد
+                                        </button>
                                     </div>
                                 </form>
 
