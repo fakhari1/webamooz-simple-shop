@@ -23,6 +23,7 @@ class BrandRequest extends FormRequest
     public function rules(): array
     {
 
+
         if ($this->method() == "POST") {
             return [
                 'title_fa' => ['required', 'string', 'unique:brands,title_fa'],
@@ -33,9 +34,9 @@ class BrandRequest extends FormRequest
 
         if ($this->method() == 'PATCH' or $this->method() == 'PUT') {
             return [
-                'title_fa' => ['required', 'string', 'unique:brands,title_fa'],
-                'title_en' => ['required', 'string', 'unique:brands,title_en'],
-                'file' => ['required', 'mimetypes:image/jpeg,image/png', 'max:250']
+                'title_fa' => ['required', 'string', 'unique:brands,title_fa,' . $this->route('brand')->id],
+                'title_en' => ['nullable', 'string', 'unique:brands,title_en,' . $this->route('brand')->id],
+                'file' => ['nullable', 'mimetypes:image/jpeg,image/png', 'max:250']
             ];
         }
     }

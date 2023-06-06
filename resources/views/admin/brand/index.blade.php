@@ -67,7 +67,9 @@
                                                                         {{ $brand->title_en }}
                                                                     </td>
                                                                     <td>
-                                                                        <img src="{{ $brand->image_url }}" alt="" style="max-width: 100px !important;">
+                                                                        <img
+                                                                            src="{{ '\storage\\' . $brand->image_url }}"
+                                                                            alt="" style="max-width: 100px !important;">
                                                                     </td>
                                                                     <td>
                                                                         <div class="dropdown">
