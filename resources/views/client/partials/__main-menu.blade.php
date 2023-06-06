@@ -1,14 +1,16 @@
 <div class="main_menu menu_position text-center">
     <nav>
         <ul>
-            <li><a class="active" href="index.html">خانه<i class="fa fa-angle-down"></i></a>
-                <ul class="sub_menu">
-                    <li><a href="index.html">خانه فروشگاه 1</a></li>
-                    <li><a href="index-2.html">خانه فروشگاه 2</a></li>
-                    <li><a href="index-3.html">خانه فروشگاه 3</a></li>
-                    <li><a href="index-4.html">خانه فروشگاه 4</a></li>
-                    <li><a href="index-5.html">خانه فروشگاه 5</a></li>
-                    <li><a href="index-6.html">خانه فروشگاه 6</a></li>
+            <li><a class="active" onclick="event.preventDefault()">برند ها<i class="fa fa-angle-down"></i></a>
+                <ul class="sub_menu" style="padding: 0 !important;" >
+                    @foreach($brands as $key => $brand)
+                        <li class="border-bottom" style="padding: 5px 15px">
+                            <a href="#" class="d-flex justify-content-between align-content-center">
+                                <span>{{ $brand->title_fa }}</span>
+                                <span><img src="{{ $brand->image_url }}" alt="" style="max-height: 20px !important;"></span>
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </li>
             <li class="mega_items"><a href="shop.html">فروشگاه<i class="fa fa-angle-down"></i></a>

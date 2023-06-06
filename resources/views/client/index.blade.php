@@ -2,8 +2,6 @@
 
 @section('content')
 
-    @include('client.partials.__top-menu')
-
     @include('client.partials.__header')
 
     @include('client.partials.__top-slider')

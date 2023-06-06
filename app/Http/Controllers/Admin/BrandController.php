@@ -27,16 +27,16 @@ class BrandController extends Controller
     public function store(BrandRequest $request)
     {
         $directory = 'images' . DIRECTORY_SEPARATOR . 'brands';
-        $file_name = $request->name . '.' . $request->title_en ?? $request->file('file')->getClientOriginalName();
+        $file_name = $request->title_en ? $request->titlle_en . '.' . $request->file('file')->getClientOriginalExtension() : $request->file('file')->getClientOriginalName();
 
         $path = $path = $request
             ->file('file')
-            ->storeAs($directory, $file_name);
+            ->storeAs('public' . DIRECTORY_SEPARATOR . $directory, $file_name);
 
         $data = [
             'title_fa' => $request->title_fa,
             'title_en' => $request->title_en ?? null,
-            'image_url' => $path,
+            'image_url' => 'storage' . DIRECTORY_SEPARATOR . $directory . DIRECTORY_SEPARATOR . $file_name,
         ];
 
         Brand::create($data);
