@@ -17,12 +17,12 @@ class BrandController extends Controller
         $brands = Brand::paginate(10);
 
 
-        return view('admin.brand.index', compact('brands'));
+        return view('admin.brands.index', compact('brands'));
     }
 
     public function create()
     {
-        return view('admin.brand.create');
+        return view('admin.brands.create');
     }
 
 
@@ -31,7 +31,7 @@ class BrandController extends Controller
         $directory = 'images' . DIRECTORY_SEPARATOR . 'brands';
         $file_name = $request->title_en ? Str::slug($request->title_en) . '.' . $request->file('file')->getClientOriginalExtension() : $request->file('file')->getClientOriginalName();
 
-        $path = $path = $request
+        $request
             ->file('file')
             ->storeAs('public' . DIRECTORY_SEPARATOR . $directory, $file_name);
 
@@ -48,7 +48,7 @@ class BrandController extends Controller
 
     public function edit(Brand $brand)
     {
-        return view('admin.brand.edit', compact('brand'));
+        return view('admin.brands.edit', compact('brand'));
     }
 
     public function update(BrandRequest $request, Brand $brand)

@@ -16,7 +16,7 @@ class CategoryController extends Controller
         $categoriesWithPaginate = Category::simplePaginate(5);
         $categories = Category::all();
 
-        return view('admin.category.index', compact('categories', 'categoriesWithPaginate'));
+        return view('admin.categories.index', compact('categories', 'categoriesWithPaginate'));
     }
 
 
@@ -43,7 +43,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         $categories = Category::all();
-        return view('admin.category.edit', ['editCategory' => $category, 'categories' => $categories]);
+        return view('admin.categories.edit', ['editCategory' => $category, 'categories' => $categories]);
     }
 
     public function update(Category $category, CategoryRequest $request)

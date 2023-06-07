@@ -24,7 +24,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                    <i class="fas fa-images"></i>
+                        <i class="fas fa-images"></i>
                         <span>برند ها</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -38,6 +38,28 @@
                             <a href="{{ route('admin.brands.create') }}">
                                 <i class="fas fa-image"></i>
                                 <span>ایجاد برند</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="fab fa-product-hunt"></i>
+                        <span>محصولات</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{ route('admin.products.index') }}">
+                                <i class="fas fa-list"></i>
+                                <span>لیست محصولات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.products.create') }}">
+                                <i class="fab fa-product-hunt"></i>
+                                <span>اضافه کردن محصول</span>
                             </a>
                         </li>
 
@@ -84,8 +106,10 @@
                                 <span data-key="t-invoices">صورتحساب</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="apps-invoices-list.html" data-key="t-invoice-list">لیست صورتحساب ها</a></li>
-                                <li><a href="apps-invoices-detail.html" data-key="t-invoice-detail">جزئیات صورتحساب</a></li>
+                                <li><a href="apps-invoices-list.html" data-key="t-invoice-list">لیست صورتحساب ها</a>
+                                </li>
+                                <li><a href="apps-invoices-detail.html" data-key="t-invoice-detail">جزئیات صورتحساب</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
@@ -129,7 +153,6 @@
                         <li><a href="pages-500.html" data-key="t-error-500">صفحه ۵۰۰</a></li>
                     </ul>
                 </li>
-
 
 
                 <li class="menu-title mt-2" data-key="t-components">المنت ها</li>
@@ -224,7 +247,6 @@
                         <li><a href="icons-fontawesome.html" data-key="t-font-awesome">فونت اوسام</a></li>
                     </ul>
                 </li>
-
 
 
                 <li>

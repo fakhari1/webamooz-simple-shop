@@ -48,7 +48,7 @@
                                                     </option>
 
                                                     @if(count($category->children))
-                                                        @include('admin.category.__children',['children' => $category->children, 'editCategory' => $editCategory])
+                                                        @include('admin.categories.__children',['children' => $category->children, 'editCategory' => $editCategory])
                                                     @endif
                                                 @endforeach
                                             </select>

@@ -29,7 +29,9 @@ class CategoryRequest extends FormRequest
                 'title_en' => ['nullable', 'unique:categories,title_en'],
                 'parent_id' => ['nullable']
             ];
-        } else if ($this->method() == 'PATCH' || $this->method() == 'PUT') {
+        }
+
+        if ($this->method() == 'PATCH' || $this->method() == 'PUT') {
             return [];
         }
 

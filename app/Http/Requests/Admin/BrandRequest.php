@@ -34,10 +34,13 @@ class BrandRequest extends FormRequest
 
         if ($this->method() == 'PATCH' or $this->method() == 'PUT') {
             return [
-                'title_fa' => ['required', 'string', 'unique:brands,title_fa,' . $this->route('brand')->id],
-                'title_en' => ['nullable', 'string', 'unique:brands,title_en,' . $this->route('brand')->id],
+                'title_fa' => ['required', 'string', 'unique:brands,title_fa,' . $this->route('brands')->id],
+                'title_en' => ['nullable', 'string', 'unique:brands,title_en,' . $this->route('brands')->id],
                 'file' => ['nullable', 'mimetypes:image/jpeg,image/png', 'max:250']
             ];
         }
+
+
+        return [];
     }
 }

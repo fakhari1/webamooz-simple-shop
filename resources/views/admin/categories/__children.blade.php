@@ -7,7 +7,7 @@
     >{{$dash . $firstChild->title_fa}}</option>
 
     @if(count($firstChild->children))
-        @include('admin.category.__children',['children' => $firstChild->children, 'editCategory' => $editCategory ?? null])
+        @include('admin.categories.__children',['children' => $firstChild->children, 'editCategory' => $editCategory ?? null])
     @endif
 
 @endforeach

@@ -93,7 +93,7 @@
                 <label class="form-check-label" for="sidebar-color-dark">تاریک</label>
             </div>
             <div class="form-check sidebar-setting">
-                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-brand" value="brand" onchange="document.body.setAttribute('data-sidebar', 'brand')">
+                <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-brand" value="brand" onchange="document.body.setAttribute('data-sidebar', 'brands')">
                 <label class="form-check-label" for="sidebar-color-brand">برند</label>
             </div>
 

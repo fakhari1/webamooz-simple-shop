@@ -32,7 +32,7 @@
                                 </option>
 
                                 @if(count($category->children))
-                                    @include('admin.category.__children',['children' => $category->children])
+                                    @include('admin.categories.__children',['children' => $category->children])
                                 @endif
 
                             @endforeach
