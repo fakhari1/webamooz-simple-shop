@@ -68,7 +68,7 @@
                                                                     </td>
                                                                     <td>
                                                                         <img
-                                                                            src="{{ '\storage\\' . $brand->image_url }}"
+                                                                            src="{{ $brand->image_icon }}"
                                                                             alt="" style="max-width: 100px !important;">
                                                                     </td>
                                                                     <td>

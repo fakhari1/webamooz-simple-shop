@@ -104,25 +104,25 @@ class DatabaseSeeder extends Seeder
         Brand::create([
             'title_fa' => 'سامسونگ',
             'title_en' => 'samsung',
-            'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1200px-Samsung_Logo.svg.png?20221128191222',
+            'image_url' => 'images\brands\samsung.png',
         ]);
 
         Brand::create([
             'title_fa' => 'ال جی',
             'title_en' => 'lg',
-            'image_url' => 'https://static.vecteezy.com/system/resources/previews/019/017/463/original/lg-transparent-logo-free-png.png',
+            'image_url' => 'images\brands\lg.PNG',
         ]);
 
         Brand::create([
             'title_fa' => 'اپل',
             'title_en' => 'apple',
-            'image_url' => 'https://w7.pngwing.com/pngs/566/77/png-transparent-apple-logo-apple-watch-logo-apple-logo-heart-logo-computer-wallpaper.png',
+            'image_url' => 'images\brands\apple.png',
         ]);
 
         Brand::create([
             'title_fa' => 'لنُوو',
             'title_en' => 'lenovo',
-            'image_url' => 'https://w7.pngwing.com/pngs/650/1002/png-transparent-dell-laptop-lenovo-logo-lg-electronics-text-trademark.png'
+            'image_url' => 'images\brands\lenovo.png'
         ]);
 
 

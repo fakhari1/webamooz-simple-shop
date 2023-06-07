@@ -11,4 +11,12 @@ class Brand extends Model
 
 
     protected $guarded = [];
+
+
+    protected $appends = ['image_icon'];
+
+    public function getImageIconAttribute()
+    {
+        return DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . $this->image_url;
+    }
 }

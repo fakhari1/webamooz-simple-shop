@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\BrandRequest;
 use App\Models\Admin\Brand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class BrandController extends Controller
 {
@@ -28,7 +29,7 @@ class BrandController extends Controller
     public function store(BrandRequest $request)
     {
         $directory = 'images' . DIRECTORY_SEPARATOR . 'brands';
-        $file_name = $request->title_en ? $request->titlle_en . '.' . $request->file('file')->getClientOriginalExtension() : $request->file('file')->getClientOriginalName();
+        $file_name = $request->title_en ? Str::slug($request->title_en) . '.' . $request->file('file')->getClientOriginalExtension() : $request->file('file')->getClientOriginalName();
 
         $path = $path = $request
             ->file('file')
@@ -65,7 +66,7 @@ class BrandController extends Controller
             }
 
             $directory = 'images' . DIRECTORY_SEPARATOR . 'brands';
-            $file_name = $request->title_en ? $request->titlle_en . '.' . $request->file('file')->getClientOriginalExtension() : $request->file('file')->getClientOriginalName();
+            $file_name = $request->title_en ? Str::slug($request->title_en) . '.' . $request->file('file')->getClientOriginalExtension() : $request->file('file')->getClientOriginalName();
 
             $path = $request
                 ->file('file')
