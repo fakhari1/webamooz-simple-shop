@@ -38,7 +38,7 @@
                                     <div class="row mb-3">
                                         <div class="col-6 mx-auto">
                                             <div class="border-1 rounded w-100">
-                                                <img src="{{ '\storage\\' . $brand->image_url }}"
+                                                <img src="{{ $brand->image_icon }}"
                                                      alt="{{ $brand->title_en }}_img"
                                                      style="max-width: 100% !important;">
                                             </div>
