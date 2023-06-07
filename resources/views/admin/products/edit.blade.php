@@ -14,40 +14,78 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h6 class="card-title mb-3">ایجاد برند</h6>
+                                <h6 class="card-title mb-3">ویرایش محصول</h6>
 
                                 <form class="forms-sample" method="post"
-                                      action="{{ route('admin.brands.update', $brand->id) }}"
+                                      action="{{ route('admin.products.update', $product) }}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     @method('patch')
                                     <div class="row mb-3">
-                                        <div class="col-12">
-                                            <input type="text" class="form-control" name="title_fa"
-                                                   value="{{ $brand->title_fa }}"
-                                                   placeholder="نام برند">
+                                        <div class="col-6">
+                                            <input type="text" class="form-control" name="name"
+                                                   placeholder="نام محصول" value="{{ $product->name }}">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" name="slug" id="" class="form-control"
+                                                   placeholder="اسلاگ محصول" value="{{ $product->slug }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-12">
-                                            <input type="text" name="title_en" id="" class="form-control"
-                                                   value="{{ $brand->title_en }}"
-                                                   placeholder="نام انگلیسی برند">
+                                        <div class="col-6">
+                                            <label for="category">دسته محصول:</label>
+                                            <select name="category_id" id="category" class="form-select">
+                                                <option disabled selected>انتخاب کنید</option>
+                                                @foreach($categories->where('parent_id', null) as $key => $category)
+                                                    @php $dash=''; @endphp
+
+                                                    <option value="{{ $category->id }}"
+                                                            @if($product->category->id == $category->id) selected @endif>
+                                                        {{ $category->title_fa }}
+                                                    </option>
+
+                                                    @if(count($category->children))
+                                                        @include('admin.categories.__children',['children' => $category->children])
+                                                    @endif
+
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="category">برند محصول:</label>
+                                            <select name="brand_id" id="brand" class="form-select">
+                                                <option disabled selected>انتخاب کنید</option>
+                                                @foreach($brands as $key => $brand)
+                                                    <option value="{{ $brand->id }}"
+                                                            @if($product->brand->id == $brand->id) selected @endif>{{ $brand->title_fa }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-6 mx-auto">
-                                            <div class="border-1 rounded w-100">
-                                                <img src="{{ $brand->image_icon }}"
-                                                     alt="{{ $brand->title_en }}_img"
-                                                     style="max-width: 100% !important;">
-                                            </div>
+                                        <div class="col-6">
+                                            <label for="price">قیمت محصول:</label>
+                                            <input type="text" name="price" id="price" class="form-control"
+                                                   value="{{ $product->price }}"
+                                                   style="direction: ltr !important;">
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col-12">
-                                            <label for="file" class="form-label">تصویر برند</label>
+                                    <div class="row mb-3 justify-content-between">
+                                        <div class="col-6">
+                                            <label for="file" class="form-label">تصویر محصول</label>
                                             <input type="file" class="form-control" name="file">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="{{ $product->image_icon }}" alt="{{ $product->image_icon }}_img"
+                                                 style="width: 100% !important;">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <label for="description">توضیحات:</label>
+                                            <textarea name="description" id="description" cols="30" rows="10"
+                                                      class="form-control"
+                                                      style="resize: none">{{ $product->description }}</textarea>
                                         </div>
                                     </div>
 

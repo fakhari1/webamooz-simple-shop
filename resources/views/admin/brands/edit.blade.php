@@ -14,7 +14,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h6 class="card-title mb-3">ایجاد برند</h6>
+                                <h6 class="card-title mb-3">ویرایش برند</h6>
 
                                 <form class="forms-sample" method="post"
                                       action="{{ route('admin.brands.update', $brand->id) }}"
