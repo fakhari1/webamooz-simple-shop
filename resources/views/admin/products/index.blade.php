@@ -37,9 +37,9 @@
                                                                 <th>#</th>
                                                                 <th>نام محصول</th>
                                                                 <th>تصویر محصول</th>
+                                                                <th>قیمت (ریال)</th>
                                                                 <th>دسته محصول</th>
                                                                 <th>برند محصول</th>
-                                                                <th>قیمت</th>
                                                                 <th style="width: 90px;">عملیات و امکانات</th>
                                                             </tr>
                                                             </thead>
@@ -71,14 +71,15 @@
                                                                              alt="{{ $product->image_icon }}_img">
                                                                     </td>
                                                                     <td>
+                                                                        {{ number_format($product->price)  }}
+                                                                    </td>
+                                                                    <td>
                                                                         {{ $product->category->title_fa }}
                                                                     </td>
                                                                     <td>
                                                                         {{ $product->brand->title_fa }}
                                                                     </td>
-                                                                    <td>
-                                                                        {{ $product->price }}
-                                                                    </td>
+
                                                                     <td>
                                                                         <div class="dropdown">
                                                                             <button
