@@ -45,7 +45,7 @@ class ProductController extends Controller
             ->file('file')
             ->storeAs('public' . DIRECTORY_SEPARATOR . $directory, $file_name);
 
-        $data['image_url'] = $directory . DIRECTORY_SEPARATOR . $file_name;
+        $data['image_url'] = DIRECTORY_SEPARATOR . $directory . DIRECTORY_SEPARATOR . $file_name;
 
 
         Product::create($data);
@@ -80,7 +80,7 @@ class ProductController extends Controller
                 ->file('file')
                 ->storeAs('public' . DIRECTORY_SEPARATOR . $directory, $file_name);
 
-            $data['image_url'] = $directory . DIRECTORY_SEPARATOR . $file_name;
+            $data['image_url'] = DIRECTORY_SEPARATOR . $directory . DIRECTORY_SEPARATOR . $file_name;
         }
 
         $product->update($data);

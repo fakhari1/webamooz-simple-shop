@@ -13,7 +13,7 @@ class Product extends Model
     use HasFactory, SoftDeletes;
 
     protected $guarded = [];
-    protected $appends = ['image_icon', 'shamsi_created_at'];
+    protected $appends = ['image_icon', 'shamsi_created_at', 'image_zoom_url'];
 
     public function category()
     {
@@ -34,5 +34,10 @@ class Product extends Model
     public function getShamsiCreatedAtAttribute()
     {
         return \verta($this->created_at)->formatJalaliDate();
+    }
+
+    public function getImageZoomUrlAttribute()
+    {
+        return str_replace('\\', '/', $this->image_icon);
     }
 }
