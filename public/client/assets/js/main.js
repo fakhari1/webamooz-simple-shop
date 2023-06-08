@@ -20,10 +20,10 @@
 	/*---stickey menu---*/
 	$(".sticky-header").not(".sticky_header_four").after('<div class="sticky-header-placeholder"></div>');
 	$(".sticky-header-placeholder").hide();
-	
+
 	$(window).on('scroll load resize', function () {
 		var scroll = $(window).scrollTop();
-		
+
 		if (scroll < 100) {
 			$(".sticky-header").removeClass("sticky");
 			$(".sticky-header-placeholder").hide();
@@ -632,7 +632,7 @@
 		});
 		$('.categories_menu_toggle li.menu_item_children > a').append('<span class="expand"></span>');
 	}
-	
+
 	categorySubMenuToggle();
 
 	/*---shop grid activation---*/
@@ -758,7 +758,7 @@
 
 		// Set up an event listener for the contact form.
 		$(form).submit(function (e) {
-			
+
 			// Stop the browser from submitting the form.
 			e.preventDefault();
 

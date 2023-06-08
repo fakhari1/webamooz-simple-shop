@@ -160,7 +160,7 @@
 <script src="{{ asset('client/assets/js/main.js') }}"></script>
 
 
-
+@yield('script')
 </body>
 
 </html>
