@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'v10.2.2',
-        'version' => '10.2.2.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'b98954750156f2acf573cbdc90658cc3d0db1f91',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -156,6 +156,33 @@
             'install_path' => __DIR__ . '/../hamcrest/hamcrest-php',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'hekmatinasser/jalali' => array(
+            'pretty_version' => 'v8.2',
+            'version' => '8.2.0.0',
+            'reference' => '745cdf40eac790b046b93d3836a29d68f15220f7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hekmatinasser/jalali',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'hekmatinasser/notowo' => array(
+            'pretty_version' => 'v1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => 'c51ad5dcedac966dd93ce558ac7e6a84e0020d6d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hekmatinasser/notowo',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'hekmatinasser/verta' => array(
+            'pretty_version' => 'v8.3.2',
+            'version' => '8.3.2.0',
+            'reference' => '5ef147733289845d14786e1418c0c0ab5f85b7fc',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hekmatinasser/verta',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'illuminate/auth' => array(
             'dev_requirement' => false,
@@ -371,9 +398,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v10.2.2',
-            'version' => '10.2.2.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'b98954750156f2acf573cbdc90658cc3d0db1f91',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -724,8 +751,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
