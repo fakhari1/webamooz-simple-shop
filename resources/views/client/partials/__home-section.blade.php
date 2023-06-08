@@ -4,16 +4,18 @@
     <div class="categories_product_area mb-55">
         <div class="container">
             <div class="categories_product_inner">
-                <div class="single_categories_product">
-                    <div class="categories_product_content">
-                        <h4><a href="shop.html"> موبایل و تبلت</a></h4>
-                        <p>12 محصول</p>
+                @foreach($parentCategories as $key => $category)
+                    <div class="single_categories_product">
+                        <div class="categories_product_content">
+                            <h4><a href="#">{{ $category->title_fa }}</a></h4>
+                            <p>{{ $category->products()->count() }} محصول</p>
+                        </div>
+                        <div class="categories_product_thumb">
+                            <a href="#"><img src="{{ asset('client/assets/img/s-product/category1.jpg') }}" alt=""></a>
+                        </div>
                     </div>
-                    <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="{{ asset('client/assets/img/s-product/category1.jpg') }}" alt=""></a>
-                    </div>
-                </div>
-                <div class="single_categories_product">
+                    @endforeach
+                {{--<div class="single_categories_product">
                     <div class="categories_product_content">
                         <h4><a href="shop.html"> کامپیوتر</a></h4>
                         <p>24 محصول</p>
@@ -93,583 +95,583 @@
                     <div class="categories_product_thumb">
                         <a href="shop.html"><img src="{{ asset('client/assets/img/s-product/category10.jpg') }}" alt=""></a>
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>
     <!--Categories product area end-->
 
-    <!--product area start-->
-    <div class="product_area deals_product_style2">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="product_header">
-                        <div class="section_title">
-                            <h2>پیشنهادهای برتر ماه</h2>
+{{--    <!--product area start-->--}}
+{{--    <div class="product_area deals_product_style2">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-12">--}}
+{{--                    <div class="product_header">--}}
+{{--                        <div class="section_title">--}}
+{{--                            <h2>پیشنهادهای برتر ماه</h2>--}}
 
-                        </div>
-                        <div class="product_tab_btn">
-                            <ul class="nav" role="tablist">
-                                <li>
-                                    <a class="active" data-toggle="tab" href="#Fashion" role="tab" aria-controls="Fashion" aria-selected="true">
-                                        مد و پوشاک
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#Games" role="tab" aria-controls="Games" aria-selected="false">
-                                        بازی و کنسول
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#Speaker" role="tab" aria-controls="Speaker" aria-selected="false">
-                                        هدفون و اسپیکر
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#Mobile" role="tab" aria-controls="Mobile" aria-selected="false">
-                                        موبایل و تبلت
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="Fashion" role="tabpanel">
-                    <div class="product_carousel product_style product_column2 owl-carousel">
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">86,000 تومان</span>
-                                            <span class="current_price">79,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/12/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">82,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/08/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">80,000 تومان</span>
-                                            <span class="current_price">70,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/02/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">76,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/11/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="Games" role="tabpanel">
-                    <div class="product_carousel product_style product_column2 owl-carousel">
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">80,000 تومان</span>
-                                            <span class="current_price">70,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/02/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">76,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/11/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">86,000 تومان</span>
-                                            <span class="current_price">79,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/12/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">82,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/08/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="Speaker" role="tabpanel">
-                    <div class="product_carousel product_style product_column2 owl-carousel">
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">76,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/11/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">86,000 تومان</span>
-                                            <span class="current_price">79,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/12/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">82,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/08/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">80,000 تومان</span>
-                                            <span class="current_price">70,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/02/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="Mobile" role="tabpanel">
-                    <div class="product_carousel product_style product_column2 owl-carousel">
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">82,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/08/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">76,000 تومان</span>
-                                            <span class="current_price">75,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/11/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">86,000 تومان</span>
-                                            <span class="current_price">79,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/12/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>
-                                        <div class="product_rating">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="price_box">
-                                            <span class="old_price">80,000 تومان</span>
-                                            <span class="current_price">70,000 تومان</span>
-                                        </div>
-                                        <div class="countdown_text">
-                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>
-                                        </div>
-                                        <div class="product_timing">
-                                            <div data-countdown="2045/02/15"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-            </div>
+{{--                        </div>--}}
+{{--                        <div class="product_tab_btn">--}}
+{{--                            <ul class="nav" role="tablist">--}}
+{{--                                <li>--}}
+{{--                                    <a class="active" data-toggle="tab" href="#Fashion" role="tab" aria-controls="Fashion" aria-selected="true">--}}
+{{--                                        مد و پوشاک--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a data-toggle="tab" href="#Games" role="tab" aria-controls="Games" aria-selected="false">--}}
+{{--                                        بازی و کنسول--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a data-toggle="tab" href="#Speaker" role="tab" aria-controls="Speaker" aria-selected="false">--}}
+{{--                                        هدفون و اسپیکر--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a data-toggle="tab" href="#Mobile" role="tab" aria-controls="Mobile" aria-selected="false">--}}
+{{--                                        موبایل و تبلت--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="tab-content">--}}
+{{--                <div class="tab-pane fade show active" id="Fashion" role="tabpanel">--}}
+{{--                    <div class="product_carousel product_style product_column2 owl-carousel">--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">86,000 تومان</span>--}}
+{{--                                            <span class="current_price">79,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/12/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">82,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/08/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">80,000 تومان</span>--}}
+{{--                                            <span class="current_price">70,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/02/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">76,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/11/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tab-pane fade" id="Games" role="tabpanel">--}}
+{{--                    <div class="product_carousel product_style product_column2 owl-carousel">--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">80,000 تومان</span>--}}
+{{--                                            <span class="current_price">70,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/02/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">76,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/11/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">86,000 تومان</span>--}}
+{{--                                            <span class="current_price">79,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/12/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">82,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/08/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tab-pane fade" id="Speaker" role="tabpanel">--}}
+{{--                    <div class="product_carousel product_style product_column2 owl-carousel">--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">76,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/11/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">86,000 تومان</span>--}}
+{{--                                            <span class="current_price">79,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/12/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">82,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/08/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">80,000 تومان</span>--}}
+{{--                                            <span class="current_price">70,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/02/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tab-pane fade" id="Mobile" role="tabpanel">--}}
+{{--                    <div class="product_carousel product_style product_column2 owl-carousel">--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product4.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">ساعت هوشمند سامسونگ مدل Gear Watch</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">82,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/08/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product7.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product8.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">76,000 تومان</span>--}}
+{{--                                            <span class="current_price">75,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/11/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">86,000 تومان</span>--}}
+{{--                                            <span class="current_price">79,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/12/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                        <article class="single_product">--}}
+{{--                            <figure>--}}
+{{--                                <div class="product_thumb">--}}
+{{--                                    <a class="primary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product5.jpg') }}" alt=""></a>--}}
+{{--                                    <a class="secondary_img" href="product-countdown.html"><img src="{{ asset('client/assets/img/product/product6.jpg') }}" alt=""></a>--}}
+{{--                                </div>--}}
+{{--                                <div class="product_content">--}}
+{{--                                    <div class="product_content_inner">--}}
+{{--                                        <h4 class="product_name"><a href="product-countdown.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></h4>--}}
+{{--                                        <div class="product_rating">--}}
+{{--                                            <ul>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="price_box">--}}
+{{--                                            <span class="old_price">80,000 تومان</span>--}}
+{{--                                            <span class="current_price">70,000 تومان</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="countdown_text">--}}
+{{--                                            <p><span>عجله کنید!</span> اتمام پیشنهاد در:</p>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="product_timing">--}}
+{{--                                            <div data-countdown="2045/02/15"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </figure>--}}
+{{--                        </article>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-        </div>
-    </div>
-    <!--product area end-->
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <!--product area end-->--}}
 
     <!--banner area start-->
     <div class="banner_area mb-55">
@@ -704,67 +706,80 @@
                             <h2>محصولات ویژه</h2>
 
                         </div>
-                        <div class="product_tab_btn">
-                            <ul class="nav" role="tablist">
-                                <li>
-                                    <a class="active" data-toggle="tab" href="#Computer" role="tab" aria-controls="Computer" aria-selected="true">
-                                        کامپیوتر
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#Networking" role="tab" aria-controls="Networking" aria-selected="false">
-                                        ابزار شبکه
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#Computer2" role="tab" aria-controls="Computer2" aria-selected="false">
-                                        کامپیوتر و شبکه
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#Audio" role="tab" aria-controls="Audio" aria-selected="false">
-                                        صوتی و تصویری
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+{{--                        <div class="product_tab_btn">--}}
+{{--                            <ul class="nav" role="tablist">--}}
+{{--                                <li>--}}
+{{--                                    <a class="active" data-toggle="tab" href="#Computer" role="tab" aria-controls="Computer" aria-selected="true">--}}
+{{--                                        کامپیوتر--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a data-toggle="tab" href="#Networking" role="tab" aria-controls="Networking" aria-selected="false">--}}
+{{--                                        ابزار شبکه--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a data-toggle="tab" href="#Computer2" role="tab" aria-controls="Computer2" aria-selected="false">--}}
+{{--                                        کامپیوتر و شبکه--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <a data-toggle="tab" href="#Audio" role="tab" aria-controls="Audio" aria-selected="false">--}}
+{{--                                        صوتی و تصویری--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
             <div class="tab-content">
-                <div class="tab-pane fade show active" id="Computer" role="tabpanel">
+                <div class="tab-pane show active" id="Computer" role="tabpanel">
                     <div class="product_carousel product_style product_column5 owl-carousel">
-                        <article class="single_product">
-                            <figure>
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="{{ asset('client/assets/img/product/product1.jpg') }}" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="{{ asset('client/assets/img/product/product2.jpg') }}" alt=""></a>
-                                    <div class="label_product">
-                                        <span class="label_sale">فروش</span>
-                                    </div>
-                                    <div class="action_links">
-                                        <ul>
-                                            <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
-                                            <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i></a></li>
-                                            <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="مشاهده سریع"><i class="ion-ios-search-strong"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product_content">
-                                    <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با</a></h4>
-                                        <div class="price_box">
-                                            <span class="old_price">86,000 تومان</span>
-                                            <span class="current_price">79,000 تومان</span>
+                        @foreach($specialProducts as $key => $specialProduct)
+                            <article class="single_product">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="product-details.html">
+                                            <img src="{{ asset($specialProduct->image_icon) }}" alt="">
+                                        </a>
+                                        <a class="secondary_img" href="product-details.html">
+                                            <img src="{{ asset($specialProduct->image_icon) }}" alt="">
+                                        </a>
+                                        <div class="label_product">
+                                            <span class="label_sale">فروش</span>
+                                        </div>
+                                        <div class="action_links">
+                                            <ul>
+                                                <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
+                                                <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i></a></li>
+                                                <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="مشاهده سریع"><i class="ion-ios-search-strong"></i></a></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="add_to_cart">
-                                        <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
+                                    <div class="product_content">
+                                        <div class="product_content_inner">
+                                            <h4 class="product_name">
+                                                {{ $specialProduct->name }}
+                                            </h4>
+                                            <p>
+                                                <a href="product-details.html" style="text-align: justify;">
+                                                    {{ str($specialProduct->description)->words(20) }}
+                                                </a>
+                                            </p>
+                                            <div class="price_box">
+                                                <span class="old_price">{{ number_format($specialProduct->price) }} تومان</span>
+                                                <span class="current_price">{{ number_format($specialProduct->price) }} تومان</span>
+                                            </div>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </figure>
-                        </article>
-                        <article class="single_product">
+                                </figure>
+                            </article>
+                        @endforeach
+                        {{--<article class="single_product">
                             <figure>
                                 <div class="product_thumb">
                                     <a class="primary_img" href="product-details.html"><img src="{{ asset('client/assets/img/product/product3.jpg') }}" alt=""></a>
@@ -947,10 +962,10 @@
 
                                 </div>
                             </figure>
-                        </article>
+                        </article>--}}
                     </div>
                 </div>
-                <div class="tab-pane fade" id="Networking" role="tabpanel">
+{{--                <div class="tab-pane fade" id="Networking" role="tabpanel">
                     <div class="product_carousel product_style product_column5 owl-carousel">
                         <article class="single_product">
                             <figure>
@@ -1517,7 +1532,7 @@
                             </figure>
                         </article>
                     </div>
-                </div>
+                </div>--}}
             </div>
 
         </div>

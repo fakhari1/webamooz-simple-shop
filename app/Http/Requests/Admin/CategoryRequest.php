@@ -27,12 +27,16 @@ class CategoryRequest extends FormRequest
             return [
                 'title_fa' => ['required', 'unique:categories,title_fa'],
                 'title_en' => ['nullable', 'unique:categories,title_en'],
-                'parent_id' => ['nullable']
+                'parent_id' => ['nullable', 'exists:categories,id']
             ];
         }
 
         if ($this->method() == 'PATCH' || $this->method() == 'PUT') {
-            return [];
+            return [
+                'title_fa' => ['required', 'unique:categories,title_fa,' . $this->route('category')->id],
+                'title_en' => ['nullable', 'unique:categories,title_en,' . $this->route('category')->id],
+                'parent_id' => ['nullable', 'exists:categories,id']
+            ];
         }
 
         return [];

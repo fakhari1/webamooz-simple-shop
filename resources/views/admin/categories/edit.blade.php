@@ -39,7 +39,7 @@
                                         <div class="col-sm-9">
                                             <select name="parent_id" id="parent_id" class="form-select">
                                                 <option disabled selected>انتخاب کنید</option>
-
+                                                <option value="{{ null }}">دسته والد</option>
                                                 @foreach($categories as $key => $category)
                                                     @php $dash=''; @endphp
 
