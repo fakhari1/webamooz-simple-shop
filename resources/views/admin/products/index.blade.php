@@ -38,6 +38,7 @@
                                                                 <th>نام محصول</th>
                                                                 <th>تصویر محصول</th>
                                                                 <th>قیمت (ریال)</th>
+                                                                <th>تاریخ ثبت</th>
                                                                 <th>دسته محصول</th>
                                                                 <th>برند محصول</th>
                                                                 <th style="width: 90px;">عملیات و امکانات</th>
@@ -72,6 +73,9 @@
                                                                     </td>
                                                                     <td>
                                                                         {{ number_format($product->price)  }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ $product->shamsi_created_at }}
                                                                     </td>
                                                                     <td>
                                                                         {{ $product->category->title_fa }}
