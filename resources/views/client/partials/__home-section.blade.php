@@ -740,10 +740,10 @@
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="product-details.html">
+                                        <a class="primary_img" href="{{ route('client.products.show', $specialProduct) }}">
                                             <img src="{{ asset($specialProduct->image_icon) }}" alt="">
                                         </a>
-                                        <a class="secondary_img" href="product-details.html">
+                                        <a class="secondary_img" href="{{ route('client.products.show', $specialProduct) }}">
                                             <img src="{{ asset($specialProduct->image_icon) }}" alt="">
                                         </a>
                                         <div class="label_product">
@@ -759,11 +759,13 @@
                                     </div>
                                     <div class="product_content">
                                         <div class="product_content_inner">
-                                            <h4 class="product_name">
-                                                {{ $specialProduct->name }}
-                                            </h4>
+                                            <a href="{{ route('client.products.show', $specialProduct) }}">
+                                                <h4 class="product_name">
+                                                    {{ $specialProduct->name }}
+                                                </h4>
+                                            </a>
                                             <p>
-                                                <a href="product-details.html" style="text-align: justify;">
+                                                <a href="{{ route('client.products.show', $specialProduct) }}" style="text-align: justify;">
                                                     {{ str($specialProduct->description)->words(20) }}
                                                 </a>
                                             </p>

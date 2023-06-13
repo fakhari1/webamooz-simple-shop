@@ -13,10 +13,7 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        $brands = Brand::all();
-        $parentCategories = Category::where('parent_id', null)->get();
-
-        return view('client.products.details', compact('product', 'brands', 'parentCategories'));
+        return view('client.products.details', compact('product'));
     }
 
 }

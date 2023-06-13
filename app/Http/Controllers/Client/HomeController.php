@@ -12,10 +12,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $parentCategories = Category::where('parent_id', null)->get();
         $specialProducts = Product::query()->take(15)->get();
-        $brands = Brand::all();
 
-        return view('client.index', compact('parentCategories', 'brands', 'specialProducts'));
+        return view('client.index', compact('specialProducts'));
     }
 }
