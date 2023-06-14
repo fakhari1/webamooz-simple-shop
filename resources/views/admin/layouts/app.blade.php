@@ -40,6 +40,7 @@
 
     {{--    <link rel="shortcut icon" href="style/images/favicon.png" />--}}
 
+    @yield('head')
 </head>
 <style type="text/css">
     @font-face {

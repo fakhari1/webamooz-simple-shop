@@ -95,7 +95,7 @@
                                                                             <ul class="dropdown-menu dropdown-menu-end">
                                                                                 <li>
                                                                                     <a class="dropdown-item d-flex justify-content-between w-75 mx-auto"
-                                                                                       href="">
+                                                                                       href="{{ route('admin.products.galleries.index', $product) }}">
                                                                                         <i class="fas fa-images text-primary"></i>
                                                                                         <span
                                                                                             class="text-center ms-2">گالری تصاویر</span>

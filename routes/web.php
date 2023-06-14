@@ -7,6 +7,7 @@ use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Client\ProductController as ClientProductController;
+use App\Http\Controllers\Admin\GalleryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +58,19 @@ Route::prefix('admin')->group(function () {
         Route::patch('{product}/update', [ProductController::class, 'update'])->name('admin.products.update');
         Route::delete('{product}/delete', [ProductController::class, 'destroy'])->name('admin.products.delete');
 
+
+        Route::prefix('{product:slug}/gallery')->group(function () {
+
+            Route::get('/', [GalleryController::class, 'index'])->name('admin.products.galleries.index');
+//            Route::get('create', [GalleryController::class, 'create'])->name('admin.products.galleries.create');
+            Route::post('store', [GalleryController::class, 'store'])->name('admin.products.galleries.store');
+
+            Route::prefix('{gallery}')->group(function () {
+//                Route::get('edit', [GalleryController::class, 'edit'])->name('admin.products.galleries.edit');
+//                Route::patch('update', [GalleryController::class, 'update'])->name('admin.products.galleries.update');
+//                Route::delete('destroy', [GalleryController::class, 'destroy'])->name('admin.products.galleries.destroy');
+            });
+        });
     });
 });
 
