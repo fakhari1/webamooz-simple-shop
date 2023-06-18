@@ -48,6 +48,17 @@
                                             </a>
 
                                         </li>
+                                        @foreach($product->galleries as $key => $gallery)
+                                            <li>
+                                                <a href="#" class="elevatezoom-gallery active"
+                                                   data-update=""
+                                                   data-image="{{ asset($gallery->image_icon) }}"
+                                                   data-zoom-image="{{ asset($gallery->image_icon) }}">
+                                                    <img src="{{ asset($gallery->image_icon) }}" alt="zo-th-1">
+                                                </a>
+
+                                            </li>
+                                        @endforeach
                                         {{--                                        <li>
                                                                                     <a href="#" class="elevatezoom-gallery active" data-update="" data-image="assets/img/product/productbig1.jpg" data-zoom-image="assets/img/product/productbig1.jpg">
                                                                                         <img src="assets/img/product/productbig1.jpg" alt="zo-th-1">

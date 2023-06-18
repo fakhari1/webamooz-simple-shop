@@ -20,6 +20,6 @@ class Gallery extends Model
 
     public function getImageIconAttribute()
     {
-        return DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . $this->path;
+        return DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . str_replace('\\', '/', $this->path);
     }
 }
